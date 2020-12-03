@@ -1,0 +1,62 @@
+﻿@model AppBolo2.Models.Bolo
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Deletar Bolo</h1>
+
+<h5>Você deseja deletar esse bolo?</h5>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SaborRecheio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SaborRecheio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SaborMassa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SaborMassa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoCobertura)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoCobertura)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DiamentroCentimetro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DiamentroCentimetro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.QuantidadeAndar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.QuantidadeAndar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.QuantidadeBolo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.QuantidadeBolo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ValorUnitario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ValorUnitario)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdBolo" />
+        <input type="submit" value="Deletar" class="btn btn-danger" />
+        <a class="btn btn-success" asp-action="Index">Voltar</a>
+    </form>
+</div>

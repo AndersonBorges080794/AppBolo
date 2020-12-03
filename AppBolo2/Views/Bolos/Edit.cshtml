@@ -1,0 +1,64 @@
+﻿@model AppBolo2.Models.Bolo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar Bolo</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdBolo" />
+            <div class="form-group">
+                <label asp-for="SaborRecheio" class="control-label"></label>
+                <input asp-for="SaborRecheio" class="form-control" />
+                <span asp-validation-for="SaborRecheio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SaborMassa" class="control-label"></label>
+                <input asp-for="SaborMassa" class="form-control" />
+                <span asp-validation-for="SaborMassa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoCobertura" class="control-label"></label>
+                <input asp-for="TipoCobertura" class="form-control" />
+                <span asp-validation-for="TipoCobertura" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiamentroCentimetro" class="control-label"></label>
+                <input asp-for="DiamentroCentimetro" class="form-control" />
+                <span asp-validation-for="DiamentroCentimetro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuantidadeAndar" class="control-label"></label>
+                <input asp-for="QuantidadeAndar" class="form-control" />
+                <span asp-validation-for="QuantidadeAndar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuantidadeBolo" class="control-label"></label>
+                <input asp-for="QuantidadeBolo" class="form-control" />
+                <span asp-validation-for="QuantidadeBolo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorUnitario" class="control-label"></label>
+                <input asp-for="ValorUnitario" class="form-control" />
+                <span asp-validation-for="ValorUnitario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a class="btn btn-success" asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
